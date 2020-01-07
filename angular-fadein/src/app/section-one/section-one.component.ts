@@ -40,7 +40,7 @@ export class SectionOneComponent implements OnInit {
   ngOnInit() {
     setTimeout(() => {
       this.toggle();
-    }, 250);
+    }, 500);
   }
 
   get stateName() {
