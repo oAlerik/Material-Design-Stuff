@@ -1,15 +1,49 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit } from "@angular/core";
+import {
+  trigger,
+  state,
+  style,
+  transition,
+  animate
+} from "@angular/animations";
 
 @Component({
-  selector: 'app-homepage',
-  templateUrl: './homepage.component.html',
-  styleUrls: ['./homepage.component.scss']
+  selector: "app-homepage",
+  templateUrl: "./homepage.component.html",
+  styleUrls: ["./homepage.component.scss"],
+  animations: [
+    trigger("fadeInState", [
+      state(
+        "show",
+        style({
+          opacity: 1,
+          transform: "translateY(-7.5%)"
+        })
+      ),
+      state(
+        "hide",
+        style({
+          opacity: 0,
+          transform: "translateY(0%)"
+        })
+      ),
+      transition("show => hide", animate("500ms ease")),
+      transition("hide => show", animate("500ms ease"))
+    ])
+  ]
 })
 export class HomepageComponent implements OnInit {
+  show = false;
 
-  constructor() { }
+  constructor() {}
 
   ngOnInit() {
+    setTimeout(() => {
+      this.show = !this.show;
+    }, 250);
   }
 
+  get stateName() {
+    return this.show ? "show" : "hide";
+  }
 }
