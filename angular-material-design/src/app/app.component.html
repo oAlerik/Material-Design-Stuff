@@ -1,4 +1,7 @@
 <mat-sidenav-container>
-  <mat-sidenav mode="side" routerLink="/test" opened>Homepage</mat-sidenav>
-  <mat-sidenav-content>bruh</mat-sidenav-content>
+  <mat-sidenav mode="side" [(opened)]="opened">Homepage</mat-sidenav>
+  <mat-sidenav-content
+    >bruh
+    <button (click)="opened = !opened">+</button>
+  </mat-sidenav-content>
 </mat-sidenav-container>
