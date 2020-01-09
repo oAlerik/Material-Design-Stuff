@@ -1,7 +1,14 @@
 <mat-sidenav-container>
   <mat-sidenav mode="side" [(opened)]="opened">Homepage</mat-sidenav>
-  <mat-sidenav-content
-    >bruh
-    <button (click)="opened = !opened">+</button>
+  <mat-sidenav-content>
+    <img
+      class="menu-button"
+      src="https://image.flaticon.com/icons/png/512/59/59660.png"
+      (click)="opened = !opened"
+    />
+    <div class="homepage-content">
+      <h1>Welcome to this page</h1>
+      <p>Why not have a cup of tea?</p>
+    </div>
   </mat-sidenav-content>
 </mat-sidenav-container>
