@@ -2,7 +2,6 @@ mat-sidenav-container {
   height: 100%;
 }
 
-mat-sidenav,
 mat-sidenav-content {
   padding: 1em;
 }
@@ -11,6 +10,10 @@ mat-sidenav {
   background-color: #eb1da6;
   font-size: 1.5em;
   width: 8em;
+
+  mat-toolbar {
+    background-color: #eb1da6;
+  }
 }
 
 .menu-button {
