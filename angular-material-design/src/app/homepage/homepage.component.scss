@@ -1,7 +1,22 @@
 .homepage-content {
   text-align: center;
-  background-color: #eb1da6;
   width: 30em;
   padding: 0.5em 3em;
   margin: auto;
+}
+
+.title-content {
+  @extend .homepage-content;
+  background-color: #eb1da6;
+}
+
+.text-content {
+  @extend .homepage-content;
+  margin-top: 2em;
+  background-color: #c50083;
+}
+
+.images {
+  @extend .homepage-content;
+  margin-top: 1em;
 }

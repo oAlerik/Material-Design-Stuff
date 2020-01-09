@@ -1,39 +1,16 @@
 import { Component, OnInit } from "@angular/core";
-import {
-  trigger,
-  state,
-  style,
-  transition,
-  animate
-} from "@angular/animations";
+import { Animations } from "./animations";
 
 @Component({
   selector: "app-homepage",
   templateUrl: "./homepage.component.html",
   styleUrls: ["./homepage.component.scss"],
-  animations: [
-    trigger("fadeInState", [
-      state(
-        "show",
-        style({
-          opacity: 1,
-          transform: "translateY(-7.5%)"
-        })
-      ),
-      state(
-        "hide",
-        style({
-          opacity: 0,
-          transform: "translateY(0%)"
-        })
-      ),
-      transition("show => hide", animate("500ms ease")),
-      transition("hide => show", animate("500ms ease"))
-    ])
-  ]
+  animations: [Animations.titleFade, Animations.textFade, Animations.imageFade]
 })
 export class HomepageComponent implements OnInit {
   show = false;
+  show2 = false;
+  show3 = false;
 
   constructor() {}
 
@@ -41,9 +18,25 @@ export class HomepageComponent implements OnInit {
     setTimeout(() => {
       this.show = !this.show;
     }, 250);
+
+    setTimeout(() => {
+      this.show2 = !this.show2;
+    }, 450);
+
+    setTimeout(() => {
+      this.show3 = !this.show3;
+    }, 650);
   }
 
   get stateName() {
     return this.show ? "show" : "hide";
+  }
+
+  get stateName2() {
+    return this.show2 ? "show" : "hide";
+  }
+
+  get stateName3() {
+    return this.show3 ? "show" : "hide";
   }
 }
