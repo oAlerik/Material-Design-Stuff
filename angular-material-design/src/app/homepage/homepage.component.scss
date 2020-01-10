@@ -1,19 +1,17 @@
 .homepage-content {
   text-align: center;
   width: 30em;
-  padding: 0.5em 3em;
+  padding: 2em 3em;
   margin: auto;
 }
 
 .title-content {
   @extend .homepage-content;
-  background-color: #eb1da6;
 }
 
 .text-content {
   @extend .homepage-content;
   margin-top: 2em;
-  background-color: #c50083;
 }
 
 .images {
