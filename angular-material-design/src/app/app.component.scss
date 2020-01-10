@@ -14,9 +14,17 @@ mat-sidenav {
   mat-toolbar {
     background-color: #c50083;
   }
+
+  mat-nav-list {
+    padding-top: 0;
+  }
 }
 
 .menu-button {
   height: 50px;
   width: 50px;
+}
+
+img:hover {
+  cursor: pointer;
 }

@@ -1,0 +1,19 @@
+mat-card {
+  width: 60em;
+  margin: auto;
+
+  img {
+    display: block;
+    width: 65%;
+    margin: 1em auto;
+  }
+
+  .buttons {
+    display: flex;
+    justify-content: center;
+
+    button {
+      margin-left: 1em;
+    }
+  }
+}

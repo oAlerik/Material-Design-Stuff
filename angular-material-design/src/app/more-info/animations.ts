@@ -7,7 +7,7 @@ import {
 } from "@angular/animations";
 
 export const Animations = {
-  contentFade: trigger("fadeInState", [
+  fadeIn: trigger("fadeInState", [
     state(
       "show",
       style({
